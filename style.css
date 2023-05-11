@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, #e2c35d, #d88771);
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Popins', sans-serif; */
+    min-height: 100vh;
+}
+
+header {font-size: 1.5rem;}
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button {
+    color: #d88771;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    color: white;
+    background: #d88771;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+.todo li {
+    flex: 1;
+}
+.trash-btn, .complete-btn {
+    background: #ff6f47;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.complete-btn {
+    background: rgb(59, 198, 59);
+}
+.complete-btn:hover {background: green;}
+.trash-btn:hover {background: #f64514;}
+
+.todo-item {padding: 0rem 0.5rem;}
+
+.clicked {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+/* Styling Select Tag */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.div-select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: rgb(76, 96, 117);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.div-select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none ;
+    transition: all 0.3s ease;
+}
+.div-select:hover::after {
+    background: #f64514;
+    color: rgb(255, 255, 255);
+}
+
+/* Form update styling */
+.form-update {
+    /* margin: 0.5rem; */
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s ease;
+    width: 100%;
+}
+.form-update input {
+    flex: 1;
+}
+
+.input-update {
+    border: none;
+    /* height: 100%; */
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    background: white;
+    margin-right: 0.5rem;
+}
+.div-form {
+    padding: 0.5rem;
+    background: lightgray;
+}
+.cancel-update-btn, .save-update-btn {
+    background: #ff9a7e;
+    color: black;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.save-update-btn {
+    background: rgb(124, 232, 124);
+}
+.save-update-btn:hover {background: rgb(101, 199, 101);}
+.cancel-update-btn:hover {background: #ff6f47;}
